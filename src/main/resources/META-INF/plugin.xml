@@ -1,0 +1,90 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.github.flyhero.toolbox</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Java Toolbox</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="qfwang666@163.com" url="https://www.github.com/flyhero">flyhero</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.java</depends>
+<!--    <depends>com.intellij.ui-designer-new</depends>-->
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Custom Notification Group"
+                           displayType="BALLOON"
+                           key="common.group.name"/>
+        <!-- 插件配置窗口 -->
+<!--        <applicationConfigurable instance="com.github.flyhero.toolbox.entity2ddl.ui.SettingPanelConfig" groupId="tools"/>-->
+
+        <!-- applicationService 这个是插件配置文件的持久化 -->
+<!--        <applicationService serviceImplementation="com.github.flyhero.toolbox.entity2ddl.setting.MainSetting"/>-->
+    </extensions>
+
+    <actions>
+        <action id="GeneratePOJOAction" class="com.github.flyhero.toolbox.json2pojo.MainAction"
+                icon="/icons/pojo.svg"
+                text="Generate POJO from JSON"
+                description="GeneratePOJOAction">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </action>
+        <group id="ToolboxMenu" text="Toolbox" icon="MyIcons.itools" popup="true">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <action id="com.github.flyhero.toolbox.interface2impl.Interface2ImplAction"
+                    class="com.github.flyhero.toolbox.interface2impl.Interface2ImplAction"
+                    icon="AllIcons.ObjectBrowser.AbbreviatePackageNames"
+                    text="Generate Impl"
+                    description="Generate impl of interface">
+            </action>
+            <action id="com.github.flyhero.toolbox.bean2bean.action.Bean2BeanAction"
+                    class="com.github.flyhero.toolbox.bean2bean.action.Bean2BeanAction"
+                    icon="AllIcons.ObjectBrowser.AbbreviatePackageNames"
+                    text="Generate POJO"
+                    description="Convert Bean to POJO">
+            </action>
+            <action id="GeneratePOJOAction1" class="com.github.flyhero.toolbox.json2pojo.MainAction"
+                    icon="/icons/pojo.svg"
+                    text="Generate POJO from JSON"
+                    description="GeneratePOJOAction">
+            </action>
+            <action id="com.github.flyhero.toolbox.entity2constant.action.staticproperty"
+                    class="com.github.flyhero.toolbox.entity2constant.action.StaticPropertyAction"
+                    icon="AllIcons.Nodes.Constant"
+                    text="Generate Static Constant"
+                    description="Gen static constant">
+            </action>
+            <action id="com.github.flyhero.toolbox.spring.autowired.action.BeanAutowiredAction"
+                    class="com.github.flyhero.toolbox.spring.autowired.action.BeanAutowiredAction"
+                    icon="MyIcons.spring"
+                    text="Autowired Dependency"
+                    description="Autowired dependency">
+            </action>
+            <action class="com.github.flyhero.toolbox.pojo2json.action.EditorPopupMenuDefaultAction"
+                    id="com.github.flyhero.toolbox.pojo2json.action.EditorPopupMenuDefaultAction"
+                    icon="AllIcons.Json.Object"
+                    text="Copy JSON"
+                    description="Convert POJO to JSON and copy to the clipboard">
+            </action>
+            <action class="com.github.flyhero.toolbox.pojo2json.action.EditorPopupMenuRandomAction"
+                    id="com.github.flyhero.toolbox.pojo2json.action.EditorPopupMenuRandomAction"
+                    icon="AllIcons.Json.Object"
+                    text="Copy JSON and Random Values"
+                    description="Convert POJO to JSON and copy to the clipboard and randomly generate some test data">
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
