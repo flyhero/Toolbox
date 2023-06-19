@@ -1,5 +1,7 @@
 <!-- Plugin description -->
 
+[支持/赞助](https://s2.loli.net/2023/06/19/auWPETprvCHjBMe.png)
+
 ### English
 1. One POJO quickly generates another POJO.
 2. Generate static constants for the property names of the Entity class.
@@ -22,12 +24,5 @@
 - Wechat 微信: Wang_hero2014
 
 ### Thanks 感谢
-
-### Donate 支持/赞助
-
-| 支付宝 | 微信 |
-| ------ | ---- |
-|   <img height="200" src="https://s2.loli.net/2023/06/13/wliDBon9T2sHQPh.jpg" width="200"/>     |  <img height="200" src="https://s2.loli.net/2023/06/13/R7UiqScswd6oIHZ.jpg" width="200"/>    |
-
 
 <!-- Plugin description end -->
