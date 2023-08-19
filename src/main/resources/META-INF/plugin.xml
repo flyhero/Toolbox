@@ -63,10 +63,11 @@
 
     </extensions>
 
-    <projectListeners>
-        <listener class="com.github.flyhero.toolbox.biz.getset.fold.GetterSetterFoldingListener" topic="com.intellij.openapi.fileEditor.FileEditorManagerListener"/>
-    </projectListeners>
-
+    <project-components>
+        <component>
+            <implementation-class>com.github.flyhero.toolbox.biz.getset.fold.FileEditorListenerComponent</implementation-class>
+        </component>
+    </project-components>
     <actions>
 <!--        <action id="GeneratePOJOAction" class="com.github.flyhero.toolbox.biz.json2pojo.MainAction"
                 icon="MyIcons.pojo"

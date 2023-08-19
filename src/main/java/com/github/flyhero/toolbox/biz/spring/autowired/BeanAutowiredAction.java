@@ -113,7 +113,7 @@ public class BeanAutowiredAction extends AnAction {
 			ok = false;
 		} else {
 			if (currentClass.isInterface() || currentClass.isEnum() || currentClass.isAnnotationType()
-					|| currentClass.isRecord() || !currentClass.isWritable()) {
+					 || !currentClass.isWritable()) {
 				ok = false;
 			}
 		}
