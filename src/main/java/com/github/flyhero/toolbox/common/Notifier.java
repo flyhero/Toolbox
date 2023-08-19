@@ -8,9 +8,6 @@ import com.intellij.openapi.project.Project;
 
 public class Notifier {
 
-
-   private static NotificationGroup notify = new NotificationGroup("com.github.flyhero.notify", NotificationDisplayType.BALLOON, true);
-
     public static void error(String content, Project project) {
         notify(content, NotificationType.ERROR, project);
     }
@@ -24,6 +21,9 @@ public class Notifier {
     }
 
     public static void notify(String content, NotificationType type, Project project) {
-        notify.createNotification(content, type).notify(project);
+        NotificationGroupManager.getInstance()
+                .getNotificationGroup("com.github.flyhero.toolbox")
+                .createNotification(content, type)
+                .notify(project);
     }
 }
