@@ -14,12 +14,7 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-
-      <a href="https://flyhero.github.io/program/toolbox-handbook.html" target="_blank">Get Started</a> <span> | </span>
-      <a href="https://github.com/flyhero" target="_blank">GitHub</a> <span> | </span>
-      <a href="https://flyhero.github.io/donate/" target="_blank">支持/赞助</a>
-        <br/><br/>
-              <b>Help Java Developers Improve Efficiency</b>
+              <b>Help Java Developers Improve Efficiency.</b>
               <ol>
                   <li>One POJO quickly generates another POJO.</li>
                   <li>Generate static constants for the property names of the Entity.</li>
@@ -30,8 +25,11 @@
                   <li>Quickly generate serial numbers.</li>
                   <li>Convert attr single-line comments to multi.</li>
               </ol>
-
-              <b>帮助Java开发者提高效率的工具箱</b>
+                <a href="https://flyhero.github.io/program/toolbox-handbook.html" target="_blank">Get Started</a> <span> | </span>
+                <a href="https://github.com/flyhero" target="_blank">GitHub</a> <span> | </span>
+                <a href="https://flyhero.github.io/donate/" target="_blank">Support</a>
+              <br/>
+              <b>帮助Java开发者提高效率的工具箱.</b>
               <ol>
                   <li>由一个POJO快速生成另一个POJO。</li>
                   <li>为Entity类的属性名生成静态常量。</li>
