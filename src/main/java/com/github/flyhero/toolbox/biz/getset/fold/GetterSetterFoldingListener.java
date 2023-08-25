@@ -173,6 +173,11 @@ public class GetterSetterFoldingListener implements FileEditorManagerListener {
 		foldingModel.runBatchFoldingOperation(() -> {
 			boolean addFoldRegion = true;
 			for (FoldRegion foldRegion : allFoldRegions) {
+				boolean valid = foldRegion.isValid();
+				if (!valid){
+					foldingModel.removeFoldRegion(foldRegion);
+					continue;
+				}
 				if (!placeholderText.equals(foldRegion.getPlaceholderText())) {
 					continue;
 				}
