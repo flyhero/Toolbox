@@ -58,7 +58,7 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <notificationGroup id="Custom Notification Group"
+        <notificationGroup id="com.github.flyhero.toolbox"
                            displayType="BALLOON"
                            key="common.group.name"/>
     </extensions>
