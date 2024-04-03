@@ -121,6 +121,12 @@
                     text="Copy JSON"
                     description="Convert POJO to JSON and copy to the clipboard">
             </action>
+            <action class="com.github.flyhero.toolbox.biz.pojo2vue.action.VueModelAction"
+                    id="com.github.flyhero.toolbox.biz.pojo2vue.action.VueModelAction"
+                    icon="MyIcons.vueJs"
+                    text="Copy Vue Model"
+                    description="Convert POJO to Vue Model and copy to the clipboard">
+            </action>
         </group>
     </actions>
 </idea-plugin>

@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.flyhero"
-version = "1.1.7-20.3-later"
+version = "1.1.8-20.3-later"
 
 repositories {
     mavenCentral()
